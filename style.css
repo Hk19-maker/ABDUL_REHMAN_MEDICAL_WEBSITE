@@ -16,57 +16,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* stack logo and optional text vertically */
     z-index: 9999;
 }
 
 #splash img {
     width: 50%; /* responsive size */
-    max-width: 300px; /* limits size on large screens */
+    max-width: 300px; /* max width on desktop */
     animation: fadeZoom 2s ease-in-out;
 }
 
-/* Animation for splash logo */
+/* Splash fade/zoom animation */
 @keyframes fadeZoom {
     0% { opacity: 0; transform: scale(0.5); }
     50% { opacity: 1; transform: scale(1.1); }
     100% { opacity: 1; transform: scale(1); }
 }
 
-/* Hide splash after page load */
+/* Hide splash after JS adds 'loaded' class */
 body.loaded #splash {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* Main content styling */
+/* Main content */
 body {
     font-family: Arial, sans-serif;
     background: black;
     color: white;
     line-height: 1.6;
     padding: 20px;
+    min-height: 100vh; /* ensures full page length */
 }
 
+/* Sections */
 section {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 60px auto; /* more space on top/bottom */
 }
 
+/* Headings */
 h2 {
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
+/* Chapters list */
 ul li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin: 50px 0 20px 0;
+    margin: 60px 0 30px 0;
     font-size: 16px;
 }
 
@@ -79,11 +84,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Responsive for smaller screens */
 @media (max-width: 768px) {
     h2 { font-size: 22px; }
     ul li { font-size: 16px; }
+    #splash img {
+        width: 70%; /* bigger on small screens */
+        max-width: 250px;
+    }
 }
-
-
-    
