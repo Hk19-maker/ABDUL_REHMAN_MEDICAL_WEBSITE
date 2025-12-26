@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* full viewport height */
+    height: 100vh;
     background: black;
     display: flex;
     justify-content: center;
@@ -21,19 +21,17 @@
 }
 
 #splash img {
-    width: 50%;
-    max-width: 300px;
+    width: 60%; /* slightly bigger logo */
+    max-width: 400px;
     animation: fadeZoom 2s ease-in-out;
 }
 
-/* Splash fade/zoom animation */
 @keyframes fadeZoom {
     0% { opacity: 0; transform: scale(0.5); }
     50% { opacity: 1; transform: scale(1.1); }
     100% { opacity: 1; transform: scale(1); }
 }
 
-/* Hide splash after JS adds 'loaded' class */
 body.loaded #splash {
     opacity: 0;
     visibility: hidden;
@@ -47,35 +45,36 @@ body {
     color: white;
     line-height: 1.8;
     padding: 30px;
-    min-height: 150vh; /* longer page */
-    font-size: 20px; /* bigger general text */
+    min-height: 150vh;
+    font-size: 40px; /* double the previous 20px */
 }
 
 /* Sections */
 section {
     max-width: 900px;
-    margin: 80px auto;
-    padding-bottom: 60px;
+    margin: 100px auto; /* more vertical spacing */
+    padding-bottom: 80px;
 }
 
 /* Headings */
 h2 {
-    font-size: 36px; /* bigger for homepage and sections */
-    margin-bottom: 25px;
+    font-size: 72px; /* double the previous 36px */
+    margin-bottom: 40px;
     text-align: center;
 }
 
 /* Chapters list */
 ul li {
-    margin-bottom: 20px;
-    font-size: 20px; /* bigger chapters text */
+    margin-bottom: 36px; /* double spacing */
+    font-size: 40px; /* double previous 20px */
+    font-weight: bold; /* make it more prominent */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin: 80px 0 50px 0;
-    font-size: 18px; /* slightly bigger footer text */
+    margin: 100px 0 60px 0;
+    font-size: 36px; /* double previous 18px */
 }
 
 footer a {
@@ -89,16 +88,11 @@ footer a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    h2 { font-size: 28px; }
-    ul li { font-size: 18px; }
-    body { font-size: 18px; }
+    h2 { font-size: 56px; }
+    ul li { font-size: 32px; }
+    body { font-size: 32px; }
     #splash img {
-        width: 70%;
-        max-width: 250px;
+        width: 80%;
+        max-width: 300px;
     }
 }
-
-
-
-
-
