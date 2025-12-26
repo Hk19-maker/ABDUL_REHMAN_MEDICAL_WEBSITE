@@ -16,13 +16,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* stack logo and optional text vertically */
+    flex-direction: column;
     z-index: 9999;
 }
 
 #splash img {
-    width: 50%; /* responsive size */
-    max-width: 300px; /* max width on desktop */
+    width: 50%;
+    max-width: 300px;
     animation: fadeZoom 2s ease-in-out;
 }
 
@@ -45,38 +45,39 @@ body {
     font-family: Arial, sans-serif;
     background: black;
     color: white;
-    line-height: 1.6;
-    padding: 20px;
-    min-height: 100vh; /* ensures full page length */
+    line-height: 1.8;
+    padding: 30px;
+    min-height: 150vh; /* increase minimum page height */
 }
 
 /* Sections */
 section {
     max-width: 900px;
-    margin: 60px auto; /* more space on top/bottom */
+    margin: 80px auto; /* more vertical spacing */
+    padding-bottom: 60px; /* adds extra space at bottom of each section */
 }
 
 /* Headings */
 h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 32px; /* slightly bigger for luxurious look */
+    margin-bottom: 25px;
     text-align: center;
 }
 
 /* Chapters list */
 ul li {
-    margin-bottom: 12px;
+    margin-bottom: 18px; /* more spacing between chapters */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin: 60px 0 30px 0;
+    margin: 80px 0 50px 0;
     font-size: 16px;
 }
 
 footer a {
-    color: #00aced; /* link color */
+    color: #00aced;
     text-decoration: none;
 }
 
@@ -84,12 +85,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    h2 { font-size: 22px; }
-    ul li { font-size: 16px; }
+    h2 { font-size: 26px; }
+    ul li { font-size: 18px; }
     #splash img {
-        width: 70%; /* bigger on small screens */
+        width: 70%;
         max-width: 250px;
     }
 }
