@@ -47,33 +47,35 @@ body {
     color: white;
     line-height: 1.8;
     padding: 30px;
-    min-height: 150vh; /* increase minimum page height */
+    min-height: 150vh; /* longer page */
+    font-size: 20px; /* bigger general text */
 }
 
 /* Sections */
 section {
     max-width: 900px;
-    margin: 80px auto; /* more vertical spacing */
-    padding-bottom: 60px; /* adds extra space at bottom of each section */
+    margin: 80px auto;
+    padding-bottom: 60px;
 }
 
 /* Headings */
 h2 {
-    font-size: 32px; /* slightly bigger for luxurious look */
+    font-size: 36px; /* bigger for homepage and sections */
     margin-bottom: 25px;
     text-align: center;
 }
 
 /* Chapters list */
 ul li {
-    margin-bottom: 18px; /* more spacing between chapters */
+    margin-bottom: 20px;
+    font-size: 20px; /* bigger chapters text */
 }
 
 /* Footer */
 footer {
     text-align: center;
     margin: 80px 0 50px 0;
-    font-size: 16px;
+    font-size: 18px; /* slightly bigger footer text */
 }
 
 footer a {
@@ -87,10 +89,16 @@ footer a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    h2 { font-size: 26px; }
+    h2 { font-size: 28px; }
     ul li { font-size: 18px; }
+    body { font-size: 18px; }
     #splash img {
         width: 70%;
         max-width: 250px;
     }
 }
+
+
+
+
+
