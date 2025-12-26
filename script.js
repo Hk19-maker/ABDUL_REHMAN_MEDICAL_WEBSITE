@@ -1,7 +1,9 @@
 // script.js
 
-// Wait for the page to fully load
+// Wait for page to fully load
 window.addEventListener('load', () => {
-    // Add 'loaded' class to body to trigger CSS transition
-    document.body.classList.add('loaded');
+    // Keep splash visible for 2.5 seconds
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 2500); // 2500ms = 2.5 seconds
 });
