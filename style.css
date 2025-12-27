@@ -89,15 +89,7 @@ ul li a:hover {
     transform: scale(1.04);
 }
 
-/* While clicking */
-ul li a:active {
-    color: red;
-}
 
-/* After opening */
-ul li a:visited {
-    color: purple;
-}
 
 /* Footer */
 footer {
