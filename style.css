@@ -157,4 +157,23 @@ footer a:hover {
 .about-section a:hover {
     text-decoration: underline;
 }
+/* Prevent text selection on headings and buttons */
+.about-title,
+h2 {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+}
+
+/* Prevent accidental selection on list items */
+ul li {
+    user-select: none;
+}
+
+/* Allow selection ONLY inside about content (professional behavior) */
+.about-section {
+    user-select: text;
+}
+
 
