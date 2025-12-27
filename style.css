@@ -118,3 +118,43 @@ footer a:hover {
         max-width: 300px;
     }
 }
+
+/* About Us Section */
+.about-title {
+    cursor: pointer;
+    color: #00bfff;
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* Hidden initially */
+.about-section {
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.about-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+/* Show animation */
+.about-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-section a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
