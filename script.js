@@ -1,9 +1,19 @@
-// script.js
-
-// Wait for page to fully load
+// Splash screen loader
 window.addEventListener('load', () => {
-    // Keep splash visible for 2.5 seconds
-    setTimeout(() => {
-        document.body.classList.add('loaded'); // triggers CSS to hide splash
-    }, 2500); // 2500ms = 2.5 seconds
+    document.body.classList.add('loaded');
+});
+
+// About section animation
+document.querySelector('.about-title').addEventListener('click', () => {
+    document.getElementById('about').scrollIntoView({
+        behavior: 'smooth'
+    });
+
+    const items = document.querySelectorAll('.about-item');
+
+    items.forEach((item, index) => {
+        setTimeout(() => {
+            item.classList.add('show');
+        }, index * 600);
+    });
 });
