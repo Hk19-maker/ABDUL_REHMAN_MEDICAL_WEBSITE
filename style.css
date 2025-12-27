@@ -175,5 +175,10 @@ ul li {
 .about-section {
     user-select: text;
 }
+body.loaded #splash {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease, visibility 1.2s ease;
+}
 
 
