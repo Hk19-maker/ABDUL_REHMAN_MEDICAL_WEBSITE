@@ -46,39 +46,68 @@ body {
     line-height: 1.8;
     padding: 30px;
     min-height: 150vh;
-    font-size: 40px; /* double the previous 20px */
+    font-size: 40px;
 }
 
 /* Sections */
 section {
     max-width: 900px;
-    margin: 100px auto; /* more vertical spacing */
+    margin: 100px auto;
     padding-bottom: 80px;
 }
 
 /* Headings */
 h2 {
-    font-size: 72px; /* double the previous 36px */
+    font-size: 72px;
     margin-bottom: 40px;
     text-align: center;
 }
 
 /* Chapters list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 ul li {
-    margin-bottom: 36px; /* double spacing */
-    font-size: 40px; /* double previous 20px */
-    font-weight: bold; /* make it more prominent */
+    margin-bottom: 36px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 🔵 Chapter link color logic */
+ul li a {
+    color: #00bfff; /* initial blue (logo color) */
+    text-decoration: none;
+    transition: color 0.4s ease, transform 0.2s ease;
+}
+
+/* Hover */
+ul li a:hover {
+    color: #00bfff;
+    transform: scale(1.04);
+}
+
+/* While clicking */
+ul li a:active {
+    color: red;
+}
+
+/* After opening */
+ul li a:visited {
+    color: purple;
 }
 
 /* Footer */
 footer {
     text-align: center;
     margin: 100px 0 60px 0;
-    font-size: 36px; /* double previous 18px */
+    font-size: 36px;
 }
 
 footer a {
-    color: #00aced;
+    color: #00bfff;
     text-decoration: none;
 }
 
@@ -91,6 +120,7 @@ footer a:hover {
     h2 { font-size: 56px; }
     ul li { font-size: 32px; }
     body { font-size: 32px; }
+
     #splash img {
         width: 80%;
         max-width: 300px;
