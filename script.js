@@ -3,22 +3,29 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// About section animation
-document.querySelector('.about-title').addEventListener('click', () => {
-    document.getElementById('about').scrollIntoView({
-        behavior: 'smooth'
-    });
+// Wait for DOM before running About code
+document.addEventListener('DOMContentLoaded', () => {
+    const aboutTitle = document.querySelector('.about-title');
+    const aboutSection = document.getElementById('about');
 
-    const items = document.querySelectorAll('.about-item');
+    if (aboutTitle && aboutSection) {
+        aboutTitle.addEventListener('click', () => {
+            aboutSection.scrollIntoView({
+                behavior: 'smooth'
+            });
 
-    items.forEach((item, index) => {
-        setTimeout(() => {
-            item.classList.add('show');
-        }, index * 600);
-    });
+            const items = document.querySelectorAll('.about-item');
+
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('show');
+                }, index * 600);
+            });
+        });
+
+        // Prevent long-press / right-click menu
+        aboutTitle.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    }
 });
-// Prevent long-press context menu on About title
-document.querySelector('.about-title').addEventListener('contextmenu', (e) => {
-    e.preventDefault();
-});
-
