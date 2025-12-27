@@ -1,21 +1,20 @@
-// Splash screen loader
+     // Splash screen loader with delay (PREMIUM FIX)
 window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 2500); // splash visible for 2.5 seconds
 });
 
-// Wait for DOM before running About code
+// About section logic
 document.addEventListener('DOMContentLoaded', () => {
     const aboutTitle = document.querySelector('.about-title');
     const aboutSection = document.getElementById('about');
 
     if (aboutTitle && aboutSection) {
         aboutTitle.addEventListener('click', () => {
-            aboutSection.scrollIntoView({
-                behavior: 'smooth'
-            });
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
 
             const items = document.querySelectorAll('.about-item');
-
             items.forEach((item, index) => {
                 setTimeout(() => {
                     item.classList.add('show');
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Prevent long-press / right-click menu
+        // Block long-press menu
         aboutTitle.addEventListener('contextmenu', (e) => {
             e.preventDefault();
         });
