@@ -17,3 +17,8 @@ document.querySelector('.about-title').addEventListener('click', () => {
         }, index * 600);
     });
 });
+// Prevent long-press context menu on About title
+document.querySelector('.about-title').addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
